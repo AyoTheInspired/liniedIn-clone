@@ -6,14 +6,18 @@ import {
 	ThumbsUpDownOutlined,
 } from "@material-ui/icons";
 import React from "react";
+import { useSelector } from "react-redux";
 import styled from "styled-components";
+import userSlice, { selectUser } from "../features/userSlice";
 import InputOption from "./InputOption";
 
 function Posts({ name, description, message, photoUrl }) {
+	const user = useSelector(selectUser);
+
 	return (
 		<Div>
 			<div className="post__header">
-				<Avatar />
+				<Avatar src={user.photoUrl}>{name[0]}</Avatar>
 				<div className="post__info">
 					<h2>{name}</h2>
 					<p>{description}</p>
