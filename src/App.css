@@ -1,4 +1,5 @@
 :root {
+	--lg-border: 1px solid lightgray;
 	/* TRANSITION */
 	--sht-trans: all 0.2s ease-in-out;
 }

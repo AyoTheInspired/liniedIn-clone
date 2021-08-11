@@ -36,6 +36,7 @@ function Sidebar() {
 			<div className="sidebar__button">
 				<p>Recent</p>
 				{recentItem("AyoTheInspired")}
+				{recentItem("ReactDeveloper")}
 				{recentItem("WebDevelopment")}
 				{recentItem("ReactEnergy")}
 				{recentItem("LinkedInClone")}
@@ -72,7 +73,7 @@ const Div = styled.div`
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		border: 1px solid lightgray;
+		border: var(--lg-border);
 		border-bottom: 0;
 		border-top-left-radius: 10px;
 		border-top-right-radius: 10px;
