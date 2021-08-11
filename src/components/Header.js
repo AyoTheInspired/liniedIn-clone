@@ -42,7 +42,7 @@ const Div = styled.div`
 	justify-content: space-evenly;
 	border-bottom: 0.1px solid lightgray;
 	padding: 10px 5px;
-	width: 100%;
+	width: 99%;
 	position: sticky;
 	top: 0;
 	z-index: 999;
@@ -53,7 +53,7 @@ const Div = styled.div`
 
 	.header__left > img {
 		object-fit: contain;
-		height: 40px;
+		height: 40px !important;
 		margin-right: 10px;
 	}
 
