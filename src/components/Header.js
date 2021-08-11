@@ -1,6 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 import SearchIcon from "@material-ui/icons/Search";
+import HeaderOption from "./HeaderOption";
+import {
+	BusinessCenter,
+	Chat,
+	Home,
+	Notifications,
+	SupervisorAccount,
+} from "@material-ui/icons";
 
 function Header() {
 	return (
@@ -15,7 +23,14 @@ function Header() {
 					<input type="text" />
 				</div>
 			</div>
-			<div className="header__right"></div>
+			<div className="header__right">
+				<HeaderOption Icon={Home} title="Home" />
+				<HeaderOption Icon={SupervisorAccount} title="My Network" />
+				<HeaderOption Icon={BusinessCenter} title="Jobs" />
+				<HeaderOption Icon={Chat} title="Messaging" />
+				<HeaderOption Icon={Notifications} title="Notifications" />
+				<HeaderOption avatar="/Ayo.jpg" title="TheInspired" />
+			</div>
 		</Div>
 	);
 }
@@ -23,6 +38,15 @@ function Header() {
 export default Header;
 
 const Div = styled.div`
+	display: flex;
+	justify-content: space-evenly;
+	border-bottom: 0.1px solid lightgray;
+	padding: 10px 5px;
+	width: 100%;
+	position: sticky;
+	top: 0;
+	z-index: 999;
+
 	.header__left {
 		display: flex;
 	}
@@ -47,5 +71,9 @@ const Div = styled.div`
 			border: none;
 			background: none;
 		}
+	}
+
+	.header__right {
+		display: flex;
 	}
 `;
