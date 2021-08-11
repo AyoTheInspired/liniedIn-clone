@@ -5,17 +5,17 @@ import {
 	ShareOutlined,
 	ThumbsUpDownOutlined,
 } from "@material-ui/icons";
-import React from "react";
+import React, { forwardRef } from "react";
 import { useSelector } from "react-redux";
 import styled from "styled-components";
-import userSlice, { selectUser } from "../features/userSlice";
+import { selectUser } from "../features/userSlice";
 import InputOption from "./InputOption";
 
-function Posts({ name, description, message, photoUrl }) {
+const Posts = forwardRef(({ name, description, message, photoUrl }, ref) => {
 	const user = useSelector(selectUser);
 
 	return (
-		<Div>
+		<Div ref={ref}>
 			<div className="post__header">
 				<Avatar src={user?.photoUrl}>{name[0]}</Avatar>
 				<div className="post__info">
@@ -36,7 +36,7 @@ function Posts({ name, description, message, photoUrl }) {
 			</div>
 		</Div>
 	);
-}
+});
 
 export default Posts;
 
