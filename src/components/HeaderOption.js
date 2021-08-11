@@ -13,7 +13,7 @@ function HeaderOption({ avatar, Icon, title, onClick }) {
 
 			{avatar && (
 				<Avatar className="headerOption__icon" src={user?.photoUrl}>
-					{user.displayName[0]}
+					{user?.displayName[0]}
 				</Avatar>
 			)}
 			<h3 className="headerOption__title mb-0"> {title} </h3>

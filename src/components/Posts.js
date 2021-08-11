@@ -17,7 +17,7 @@ function Posts({ name, description, message, photoUrl }) {
 	return (
 		<Div>
 			<div className="post__header">
-				<Avatar src={user.photoUrl}>{name[0]}</Avatar>
+				<Avatar src={user?.photoUrl}>{name[0]}</Avatar>
 				<div className="post__info">
 					<h2>{name}</h2>
 					<p>{description}</p>

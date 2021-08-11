@@ -42,7 +42,7 @@ function Header() {
 				<HeaderOption
 					onClick={logoutOfApp}
 					avatar="/Ayo.jpg"
-					title={user.displayName}
+					title={user?.displayName}
 				/>
 			</div>
 		</Div>
