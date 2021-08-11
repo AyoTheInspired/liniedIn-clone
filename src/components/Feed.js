@@ -1,9 +1,22 @@
-import { Create } from "@material-ui/icons";
-import React from "react";
+import {
+	CalendarViewDay,
+	Create,
+	EventNote,
+	Image,
+	Subscriptions,
+} from "@material-ui/icons";
+import React, { useState } from "react";
 import styled from "styled-components";
 import InputOption from "./InputOption";
+import Posts from "./Posts";
 
 function Feed() {
+	const [posts, setPosts] = useState([]);
+
+	const sendPost = (e) => {
+		e.preventDefault();
+	};
+
 	return (
 		<Div>
 			<div className="feed__inputContainer">
@@ -11,14 +24,31 @@ function Feed() {
 					<Create />
 					<form>
 						<input type="text" placeholder="Post a feed..." />
-						<button type="submit">Send</button>
+						<button type="submit" onClick={sendPost}>
+							Send
+						</button>
 					</form>
 				</div>
 
 				<div className="feed__inputOptions">
-					<InputOption />
+					<InputOption Icon={Image} title="Photo" color="#70B5F9" />
+					<InputOption Icon={Subscriptions} title="Video" color="#e7a33e" />
+					<InputOption Icon={EventNote} title="Event" color="#c0cbcd" />
+					<InputOption
+						Icon={CalendarViewDay}
+						title="Write Article"
+						color="#7FC15E"
+					/>
 				</div>
 			</div>
+			{posts.map((post) => (
+				<Posts />
+			))}
+			<Posts
+				name="Ayo Abimbola"
+				description="Test Description"
+				message="Random message..."
+			/>
 		</Div>
 	);
 }
@@ -61,5 +91,10 @@ const Div = styled.div`
 			outline-width: 0;
 			font-weight: 600;
 		}
+	}
+
+	.feed__inputOptions {
+		display: flex;
+		justify-content: space-evenly;
 	}
 `;
