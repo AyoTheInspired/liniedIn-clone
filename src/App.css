@@ -2,3 +2,14 @@
 	/* TRANSITION */
 	--sht-trans: all 0.2s ease-in-out;
 }
+
+.app {
+	background-color: #836e30;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.app__body {
+	display: flex;
+}
