@@ -28,5 +28,6 @@ const Div = styled.div`
 
 	h4 {
 		margin-left: 5px;
+		white-space: nowrap;
 	}
 `;

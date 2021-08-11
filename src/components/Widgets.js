@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-function Status() {
+function Widgets() {
 	return (
 		<Div>
 			Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur sint
@@ -41,7 +41,7 @@ function Status() {
 	);
 }
 
-export default Status;
+export default Widgets;
 
 const Div = styled.div`
 	flex: 0.2;

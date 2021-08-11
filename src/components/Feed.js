@@ -7,7 +7,7 @@ import {
 } from "@material-ui/icons";
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import { db } from "../firebase";
+import { db, auth } from "../firebase";
 import InputOption from "./InputOption";
 import Posts from "./Posts";
 import firebase from "firebase";
@@ -17,14 +17,16 @@ function Feed() {
 	const [input, setInput] = useState("");
 
 	useEffect(() => {
-		db.collection("posts").onSnapshot((snapshot) =>
-			setPosts(
-				snapshot.docs.map((doc) => ({
-					id: doc.id,
-					data: doc.data(),
-				}))
-			)
-		);
+		db.collection("posts")
+			.orderBy("timestamp", "desc")
+			.onSnapshot((snapshot) =>
+				setPosts(
+					snapshot.docs.map((doc) => ({
+						id: doc.id,
+						data: doc.data(),
+					}))
+				)
+			);
 	}, []);
 
 	const sendPost = (e) => {
@@ -37,6 +39,8 @@ function Feed() {
 			photoUrl: "",
 			timestamp: firebase.firestore.FieldValue.serverTimestamp(),
 		});
+
+		setInput("");
 	};
 
 	return (
