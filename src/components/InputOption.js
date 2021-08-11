@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-function InputOption({ Icon, title }) {
+function InputOption({ Icon, title, color }) {
 	return (
 		<Div>
 			<Icon style={{ color: color }} />
@@ -12,4 +12,21 @@ function InputOption({ Icon, title }) {
 
 export default InputOption;
 
-const Div = styled.div``;
+const Div = styled.div`
+	display: flex;
+	align-items: center;
+	margin-top: 15px;
+	color: gray;
+	padding: 10px;
+	cursor: pointer;
+	transition: var(--sht-trans);
+
+	&:hover {
+		background-color: whitesmoke;
+		border-radius: 10px;
+	}
+
+	h4 {
+		margin-left: 5px;
+	}
+`;

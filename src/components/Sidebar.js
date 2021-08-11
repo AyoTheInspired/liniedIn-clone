@@ -15,7 +15,7 @@ function Sidebar() {
 			<div className="sidebar__top">
 				<img
 					src="https://res.cloudinary.com/ayotheinspired/image/upload/v1622868491/inspired-global-media/images/Backgrounds/pexels-edward-jenner-4252666_eybi6p.jpg"
-					alt="splash-image"
+					alt="splash"
 				/>
 				<Avatar className="sidebar__avatar" />
 				<h2>Display name</h2>
