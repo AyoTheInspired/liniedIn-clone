@@ -95,7 +95,7 @@ function Feed() {
 export default Feed;
 
 const Div = styled.div`
-	flex: 0.6;
+	flex: 0.3;
 	margin: 0 20px;
 
 	.feed__inputContainer {

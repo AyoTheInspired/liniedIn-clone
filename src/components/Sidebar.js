@@ -29,11 +29,7 @@ function Sidebar() {
 
 			<div className="sidebar__stats">
 				<div className="sidebar__stat">
-					<p>Who viewed you</p>
-					<p className="sidebar__statNumber">2,577</p>
-				</div>
-				<div className="sidebar__stat">
-					<p>Who viewed you</p>
+					<p>Recent Views :</p>
 					<p className="sidebar__statNumber">8,335</p>
 				</div>
 			</div>
@@ -71,6 +67,7 @@ const Div = styled.div`
 	.sidebar__top h4 {
 		margin-top: 3px;
 		color: gray;
+		margin: 3px 15px;
 		font-size: 12;
 	}
 
