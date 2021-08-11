@@ -3,6 +3,13 @@ import React from "react";
 import styled from "styled-components";
 
 function Sidebar() {
+	const recentItem = (topic) => (
+		<div className="sidebar__recentItem">
+			<span className="sidebar__hash">#</span>
+			<p> {topic} </p>
+		</div>
+	);
+
 	return (
 		<Div>
 			<div className="sidebar__top">
@@ -28,6 +35,10 @@ function Sidebar() {
 
 			<div className="sidebar__button">
 				<p>Recent</p>
+				{recentItem("AyoTheInspired")}
+				{recentItem("WebDevelopment")}
+				{recentItem("ReactEnergy")}
+				{recentItem("LinkedInClone")}
 			</div>
 		</Div>
 	);
@@ -45,6 +56,16 @@ const Div = styled.div`
 
 	.sidebar__avatar {
 		margin-bottom: 10px;
+	}
+
+	.sidebar__top h2 {
+		font-size: 18px;
+	}
+
+	.sidebar__top h4 {
+		margin-top: 3px;
+		color: gray;
+		font-size: 12;
 	}
 
 	.sidebar__top {
@@ -91,6 +112,43 @@ const Div = styled.div`
 		.sidebar__statNumber {
 			font-weight: bold;
 			color: #0a66c2 !important;
+		}
+	}
+
+	.sidebar__button {
+		text-align: left;
+		padding: 10px;
+		border: 1px solid lightgray;
+		background-color: #fff;
+		border-radius: 10px;
+		margin-top: 10px;
+
+		& > p {
+			font-size: 13px;
+			padding-bottom: 10px;
+			color: #0a66c2;
+			font-weight: bold;
+		}
+	}
+
+	.sidebar__hash {
+		margin: 0 5px;
+	}
+
+	.sidebar__recentItem {
+		display: flex;
+		font-size: 13px;
+		color: gray;
+		font-weight: bold;
+		cursor: pointer;
+		margin-bottom: 5px;
+		padding: 5px;
+		transition: var(--sht-trans);
+
+		&:hover {
+			background-color: whitesmoke;
+			border-radius: 10px;
+			color: #000;
 		}
 	}
 `;
