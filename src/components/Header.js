@@ -12,6 +12,7 @@ import {
 import { useDispatch, useSelector } from "react-redux";
 import { logout, selectUser } from "../features/userSlice";
 import { auth } from "../firebase";
+import { Menu } from "@material-ui/core";
 
 function Header() {
 	const dispatch = useDispatch();
@@ -45,6 +46,8 @@ function Header() {
 					title={user?.displayName}
 				/>
 			</div>
+
+			<Menu />
 		</Div>
 	);
 }
