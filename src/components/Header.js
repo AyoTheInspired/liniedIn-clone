@@ -6,6 +6,9 @@ import {
 	BusinessCenter,
 	Chat,
 	Home,
+	MenuBook,
+	MenuOpen,
+	MenuOpenOutlined,
 	Notifications,
 	SupervisorAccount,
 } from "@material-ui/icons";
@@ -46,8 +49,6 @@ function Header() {
 					title={user?.displayName}
 				/>
 			</div>
-
-			<Menu />
 		</Div>
 	);
 }
